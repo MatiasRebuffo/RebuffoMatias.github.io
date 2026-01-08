@@ -62,3 +62,12 @@ section {
         transform: translateY(0);
     }
 }
+
+.foto {
+    transition: transform 0.3s ease;
+}
+
+.foto:hover {
+    transform: scale(1.05);
+}
+

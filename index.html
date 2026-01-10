@@ -1,154 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Portfolio - Matías</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Portfolio | Matías</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- FUENTES -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- FUENTE -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-    scroll-behavior:smooth;
-}
-
-body{
-    background:#f9f9f9;
-    overflow-x:hidden;
-}
-
-/* NAV */
-nav{
-    position:fixed;
-    top:0;
-    width:100%;
-    background:#fff;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 60px;
-    box-shadow:0 4px 10px rgba(0,0,0,0.05);
-    z-index:1000;
-}
-
-nav h2{
-    color:#222;
-}
-
-nav ul{
-    display:flex;
-    list-style:none;
-    gap:30px;
-}
-
-nav ul li a{
-    text-decoration:none;
-    color:#333;
-    font-weight:500;
-}
-
-nav ul li a:hover{
-    color:#6c63ff;
-}
-
-/* HERO */
-#home{
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:120px 80px;
-    position:relative;
-}
-
-.hero-text{
-    max-width:600px;
-    animation:fadeLeft 1s ease;
-}
-
-.hero-text h1{
-    font-size:48px;
-    margin-bottom:10px;
-}
-
-.hero-text span{
-    color:#6c63ff;
-}
-
-.hero-text p{
-    font-size:18px;
-    margin-bottom:30px;
-    color:#555;
-}
-
-.hero-text a{
-    padding:14px 28px;
-    background:#6c63ff;
-    color:#fff;
-    border-radius:30px;
-    text-decoration:none;
-    font-weight:600;
-}
-
-.hero-img{
-    animation:fadeRight 1s ease;
-}
-
-.hero-img img{
-    width:350px;
-    height:350px;
-    border-radius:50%;
-    object-fit:cover;
-    border:8px solid #6c63ff;
-}
-
-/* SECCIONES */
-section{
-    padding:100px 80px;
-}
-
-section h2{
-    text-align:center;
-    font-size:36px;
-    margin-bottom:40px;
-}
-
-/* ABOUT / SERVICES / PORTFOLIO / CONTACT */
-.box{
-    max-width:900px;
-    margin:auto;
-    background:#fff;
-    padding:40px;
-    border-radius:20px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.08);
-}
-
-/* ANIMACIONES */
-@keyframes fadeLeft{
-    from{opacity:0; transform:translateX(-50px);}
-    to{opacity:1; transform:translateX(0);}
-}
-
-@keyframes fadeRight{
-    from{opacity:0; transform:translateX(50px);}
-    to{opacity:1; transform:translateX(0);}
-}
-
-/* PARTICLES */
-#particles-js{
-    position:fixed;
-    width:100%;
-    height:100%;
-    top:0;
-    left:0;
-    z-index:-1;
-}
-</style>
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
@@ -160,13 +21,13 @@ section h2{
     <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
+        <li><a href="#skills">Skills</a></li>
         <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
 </nav>
 
-<section id="home">
+<section id="home" class="hero">
     <div class="hero-text">
         <h1>Hola, soy <span>Matías</span></h1>
         <p>Analista de Datos / IT Support</p>
@@ -174,7 +35,7 @@ section h2{
     </div>
 
     <div class="hero-img">
-        <img src="foto.jpg.jpg" alt="Foto CV">
+        <img src="assets/img/foto.jpg.jpg" alt="Foto CV">
     </div>
 </section>
 
@@ -182,22 +43,22 @@ section h2{
     <h2>About</h2>
     <div class="box">
         <p>
-            Soy analista de datos junior con experiencia en soporte IT,
-            SQL Server, Excel y Power BI. Me interesa seguir creciendo
-            profesionalmente en el área de datos y back office.
+            Analista de datos junior con experiencia en soporte IT.
+            Trabajo con SQL Server, Excel y Power BI.
+            Busco seguir creciendo profesionalmente en el área de datos.
         </p>
     </div>
 </section>
 
-<section id="services">
-    <h2>Services</h2>
-    <div class="box">
-        <ul>
-            <li>Análisis de datos</li>
-            <li>Consultas SQL</li>
-            <li>Soporte técnico IT</li>
-            <li>Reportes en Excel y Power BI</li>
-        </ul>
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="box skills">
+        <span>SQL Server</span>
+        <span>Excel</span>
+        <span>Power BI</span>
+        <span>Soporte IT</span>
+        <span>Oracle</span>
+        <span>Git / GitHub</span>
     </div>
 </section>
 
@@ -216,12 +77,12 @@ section h2{
     </div>
 </section>
 
-<!-- PARTICLES JS -->
+<!-- PARTICLES -->
 <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 <script>
 particlesJS("particles-js", {
   particles: {
-    number: { value: 80 },
+    number: { value: 90 },
     color: { value: "#6c63ff" },
     shape: { type: "circle" },
     opacity: { value: 0.5 },
@@ -233,3 +94,4 @@ particlesJS("particles-js", {
 
 </body>
 </html>
+

@@ -1,75 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #eaeaea;
+    background: #f2f4f8;
 }
 
-.cv {
-    display: flex;
+/* HEADER */
+.header {
     width: 100%;
-    min-height: 100vh;
-    margin: 0;
-    background: #fff;
-
-}
-
-.left {
-    width: 30%;
-    background: #2c3e50;
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #2c3e50, #34495e);
     color: white;
-    padding: 20px;
 }
 
-.left h2 {
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 5px;
-}
-
-.left ul {
-    padding-left: 20px;
-}
-
-.foto {
-    width: 100%;
+.foto-header {
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
-    margin-bottom: 20px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 4px solid white;
 }
 
-.right {
-    width: 70%;
-    padding: 30px;
+/* CONTENIDO */
+.content {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
 }
 
-.right h1 {
+/* TARJETAS */
+.card {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.card h3 {
     margin-top: 0;
+    color: #2c3e50;
 }
 
-section {
-    margin-bottom: 20px;
-}
-
-/* Animación de entrada */
-.cv {
-    animation: fadeInUp 1s ease;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.foto {
-    transition: transform 0.3s ease;
-}
-
-.foto:hover {
-    transform: scale(1.05);
-}
-
-<!-- rebuild -->

@@ -1,84 +1,235 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Matias Rebuffo | Portfolio</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+<meta charset="UTF-8">
+<title>Portfolio - Matías</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- FUENTES -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f9f9f9;
+    overflow-x:hidden;
+}
+
+/* NAV */
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:#fff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 60px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.05);
+    z-index:1000;
+}
+
+nav h2{
+    color:#222;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#333;
+    font-weight:500;
+}
+
+nav ul li a:hover{
+    color:#6c63ff;
+}
+
+/* HERO */
+#home{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:120px 80px;
+    position:relative;
+}
+
+.hero-text{
+    max-width:600px;
+    animation:fadeLeft 1s ease;
+}
+
+.hero-text h1{
+    font-size:48px;
+    margin-bottom:10px;
+}
+
+.hero-text span{
+    color:#6c63ff;
+}
+
+.hero-text p{
+    font-size:18px;
+    margin-bottom:30px;
+    color:#555;
+}
+
+.hero-text a{
+    padding:14px 28px;
+    background:#6c63ff;
+    color:#fff;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.hero-img{
+    animation:fadeRight 1s ease;
+}
+
+.hero-img img{
+    width:350px;
+    height:350px;
+    border-radius:50%;
+    object-fit:cover;
+    border:8px solid #6c63ff;
+}
+
+/* SECCIONES */
+section{
+    padding:100px 80px;
+}
+
+section h2{
+    text-align:center;
+    font-size:36px;
+    margin-bottom:40px;
+}
+
+/* ABOUT / SERVICES / PORTFOLIO / CONTACT */
+.box{
+    max-width:900px;
+    margin:auto;
+    background:#fff;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* ANIMACIONES */
+@keyframes fadeLeft{
+    from{opacity:0; transform:translateX(-50px);}
+    to{opacity:1; transform:translateX(0);}
+}
+
+@keyframes fadeRight{
+    from{opacity:0; transform:translateX(50px);}
+    to{opacity:1; transform:translateX(0);}
+}
+
+/* PARTICLES */
+#particles-js{
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    z-index:-1;
+}
+</style>
 </head>
+
 <body>
 
-<!-- FONDO ANIMADO -->
-<canvas id="particles"></canvas>
+<div id="particles-js"></div>
 
-<!-- NAVBAR -->
-<nav class="navbar">
-    <div class="logo">Matias</div>
+<nav>
+    <h2>Portfolio</h2>
     <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
 </nav>
 
-<!-- HERO -->
-<section id="home" class="hero">
+<section id="home">
     <div class="hero-text">
-        <h1>Hi There, <br> I'm <span>Matias Rebuffo</span></h1>
-        <h3>Soporte IT | Analista de Datos Jr</h3>
-        <a href="#about" class="btn">About Me</a>
+        <h1>Hola, soy <span>Matías</span></h1>
+        <p>Analista de Datos / IT Support</p>
+        <a href="#about">Sobre mí</a>
     </div>
 
     <div class="hero-img">
-        <img src="assets/img/foto.jpg.jpg" alt="Foto Matias">
+        <img src="foto.jpg.jpg" alt="Foto CV">
     </div>
 </section>
 
-<!-- ABOUT -->
-<section id="about" class="section">
-    <h2>About Me</h2>
-    <p>
-        Estudiante de Ingeniería en Informática con experiencia en Soporte IT
-        y Análisis de Datos. Orientado a la mejora de procesos y toma de
-        decisiones basadas en datos.
-    </p>
-</section>
-
-<!-- SKILLS -->
-<section id="skills" class="section">
-    <h2>Skills</h2>
-    <div class="skills">
-        <span>SQL Server</span>
-        <span>Power BI</span>
-        <span>Excel</span>
-        <span>Data Analytics</span>
-        <span>Soporte IT</span>
-        <span>Active Directory</span>
+<section id="about">
+    <h2>About</h2>
+    <div class="box">
+        <p>
+            Soy analista de datos junior con experiencia en soporte IT,
+            SQL Server, Excel y Power BI. Me interesa seguir creciendo
+            profesionalmente en el área de datos y back office.
+        </p>
     </div>
 </section>
 
-<!-- EXPERIENCE -->
-<section id="experience" class="section">
-    <h2>Experience</h2>
-
-    <p><strong>CFO Tech IT</strong> – Analista de Datos</p>
-    <p>2024 – 2025</p>
-
-    <p><strong>Hospital Alemán</strong> – Soporte IT</p>
-    <p>2021 – 2024</p>
+<section id="services">
+    <h2>Services</h2>
+    <div class="box">
+        <ul>
+            <li>Análisis de datos</li>
+            <li>Consultas SQL</li>
+            <li>Soporte técnico IT</li>
+            <li>Reportes en Excel y Power BI</li>
+        </ul>
+    </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="section">
+<section id="portfolio">
+    <h2>Portfolio</h2>
+    <div class="box">
+        <p>Próximamente proyectos y dashboards.</p>
+    </div>
+</section>
+
+<section id="contact">
     <h2>Contact</h2>
-    <p>Email: rebuffomatias@outlook.com</p>
-    <p>Tel: +54 11 6402-3677</p>
+    <div class="box">
+        <p>Email: tuemail@gmail.com</p>
+        <p>LinkedIn: linkedin.com/in/tuperfil</p>
+    </div>
 </section>
 
-<script src="assets/js/particles.js"></script>
+<!-- PARTICLES JS -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script>
+particlesJS("particles-js", {
+  particles: {
+    number: { value: 80 },
+    color: { value: "#6c63ff" },
+    shape: { type: "circle" },
+    opacity: { value: 0.5 },
+    size: { value: 3 },
+    move: { enable: true, speed: 2 }
+  }
+});
+</script>
+
 </body>
 </html>
-
-
-

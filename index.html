@@ -2,98 +2,81 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matias Rebuffo | Portfolio</title>
-
-    <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-    <!-- HEADER -->
-    <header class="header">
-        <img src="assets/img/foto.jpg.jpg" alt="Foto CV" class="foto-header">
-        <h1>Matias Rebuffo</h1>
-        <h2>Soporte IT | Analista de Datos Jr</h2>
-    </header>
+<!-- FONDO ANIMADO -->
+<canvas id="particles"></canvas>
 
-    <!-- CONTENIDO -->
-    <main class="content">
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">Matias</div>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
 
-        <section class="card">
-            <h3>Perfil Profesional</h3>
-            <p>
-                Estudiante de tercer año en Ingeniería en Informática, con experiencia
-                en soporte IT y análisis de datos. Orientado a la mejora de procesos,
-                la innovación y la toma de decisiones basadas en datos. Persona
-                organizada, resolutiva y predispuesta.
-            </p>
-        </section>
+<!-- HERO -->
+<section id="home" class="hero">
+    <div class="hero-text">
+        <h1>Hi There, <br> I'm <span>Matias Rebuffo</span></h1>
+        <h3>Soporte IT | Analista de Datos Jr</h3>
+        <a href="#about" class="btn">About Me</a>
+    </div>
 
-        <section class="card">
-            <h3>Contacto</h3>
-            <p><strong>Email:</strong> rebuffomatias@outlook.com</p>
-            <p><strong>Tel:</strong> +54 11 6402-3677</p>
-            <p><strong>Dirección:</strong> Buenos Aires, Argentina</p>
-        </section>
+    <div class="hero-img">
+        <img src="assets/img/foto.jpg.jpg" alt="Foto Matias">
+    </div>
+</section>
 
-        <section class="card">
-            <h3>Habilidades</h3>
-            <ul>
-                <li>SQL Server</li>
-                <li>Power BI</li>
-                <li>Excel</li>
-                <li>Data Analytics & Visualization</li>
-                <li>Soporte Técnico IT</li>
-                <li>Active Directory</li>
-            </ul>
-        </section>
+<!-- ABOUT -->
+<section id="about" class="section">
+    <h2>About Me</h2>
+    <p>
+        Estudiante de Ingeniería en Informática con experiencia en Soporte IT
+        y Análisis de Datos. Orientado a la mejora de procesos y toma de
+        decisiones basadas en datos.
+    </p>
+</section>
 
-        <section class="card">
-            <h3>Experiencia</h3>
+<!-- SKILLS -->
+<section id="skills" class="section">
+    <h2>Skills</h2>
+    <div class="skills">
+        <span>SQL Server</span>
+        <span>Power BI</span>
+        <span>Excel</span>
+        <span>Data Analytics</span>
+        <span>Soporte IT</span>
+        <span>Active Directory</span>
+    </div>
+</section>
 
-            <p><strong>CFO Tech IT</strong> – Analista de Datos</p>
-            <p><em>Noviembre 2024 – Diciembre 2025</em></p>
-            <ul>
-                <li>Extracción, limpieza y validación de datos financieros.</li>
-                <li>Generación de reportes e indicadores KPI.</li>
-                <li>Automatización de procesos con SQL Server y Power BI.</li>
-                <li>Análisis de tendencias y performance bancaria.</li>
-                <li>Creación de dashboards interactivos.</li>
-            </ul>
+<!-- EXPERIENCE -->
+<section id="experience" class="section">
+    <h2>Experience</h2>
 
-            <br>
+    <p><strong>CFO Tech IT</strong> – Analista de Datos</p>
+    <p>2024 – 2025</p>
 
-            <p><strong>Hospital Alemán</strong> – Soporte Técnico IT</p>
-            <p><em>Diciembre 2021 – Noviembre 2024</em></p>
-            <ul>
-                <li>Resolución de incidentes informáticos.</li>
-                <li>Gestión de tickets.</li>
-                <li>Instalación y mantenimiento de PCs.</li>
-                <li>Administración de usuarios en Active Directory.</li>
-                <li>Soporte a sistemas internos.</li>
-                <li>Diagnóstico de redes LAN/WAN.</li>
-            </ul>
-        </section>
+    <p><strong>Hospital Alemán</strong> – Soporte IT</p>
+    <p>2021 – 2024</p>
+</section>
 
-        <section class="card">
-            <h3>Educación</h3>
-            <p><strong>Ingeniería en Sistemas</strong></p>
-            <p>2022 – Actualidad</p>
-        </section>
+<!-- CONTACT -->
+<section id="contact" class="section">
+    <h2>Contact</h2>
+    <p>Email: rebuffomatias@outlook.com</p>
+    <p>Tel: +54 11 6402-3677</p>
+</section>
 
-        <section class="card">
-            <h3>Cursos</h3>
-            <ul>
-                <li>CCNA – Cisco</li>
-                <li>SQL Server</li>
-                <li>Data Analytics & Visualization</li>
-                <li>Power BI</li>
-            </ul>
-        </section>
-
-    </main>
-
+<script src="assets/js/particles.js"></script>
 </body>
 </html>
 

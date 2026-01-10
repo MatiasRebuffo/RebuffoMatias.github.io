@@ -5,7 +5,23 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #f2f4f8;
+
+    /* 🌈 FONDO ANIMADO */
+    background: linear-gradient(
+        270deg,
+        #e3edf7,
+        #f2f4f8,
+        #dfe9f3
+    );
+    background-size: 400% 400%;
+    animation: bgMove 12s ease infinite;
+}
+
+/* ANIMACIÓN FONDO */
+@keyframes bgMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 /* HEADER */
@@ -15,6 +31,7 @@ body {
     padding: 40px 20px;
     background: linear-gradient(135deg, #2c3e50, #34495e);
     color: white;
+    animation: fadeDown 1s ease;
 }
 
 .foto-header {
@@ -40,28 +57,57 @@ body {
     margin-bottom: 25px;
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-}
+    position: relative;
+    overflow: hidden;
 
-.card h3 {
-    margin-top: 0;
-    color: #2c3e50;
-}
-
-/* ANIMACIONES SUAVES */
-.header {
-    animation: fadeDown 1s ease;
-}
-
-.card {
     animation: fadeUp 0.8s ease;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* 🌀 EFECTO “CARGANDO / LUZ” AL PASAR EL MOUSE */
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(44, 62, 80, 0.15),
+        transparent
+    );
+    transition: all 0.6s ease;
+}
+
+.card:hover::before {
+    left: 100%;
 }
 
 .card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 18px 35px rgba(0,0,0,0.15);
 }
 
+/* TITULOS */
+.card h3 {
+    margin-top: 0;
+    color: #2c3e50;
+    position: relative;
+}
+
+.card h3::after {
+    content: "";
+    width: 40px;
+    height: 3px;
+    background: #2c3e50;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+}
+
+/* ANIMACIONES */
 @keyframes fadeUp {
     from {
         opacity: 0;
@@ -83,3 +129,4 @@ body {
         transform: translateY(0);
     }
 }
+
